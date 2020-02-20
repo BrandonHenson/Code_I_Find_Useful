@@ -10,7 +10,7 @@ import os
 folder = input('What folder are the files in?')
 #folder = 'C:/Users/brandonh/Desktop/ExcelFilesToSplit/'
 for file in os.listdir(folder):
-    os.mkdir('C:/Users/brandonh/Desktop/ExcelFilesToSplit/' + file.replace('xlsx',''))
+    os.mkdir(folder +'/' + file.replace('xlsx',''))
 
 def createConfigfile():
     config = configparser.ConfigParser()
