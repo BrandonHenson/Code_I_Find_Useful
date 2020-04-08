@@ -85,3 +85,22 @@ image_sort(dirname)
 print("   delete empty folders")
 del_empty_dirs(dirname)
 print("  deleted completed!")
+path = dirname
+for folder in os.listdir(path):
+    if not '.py' in folder:
+
+        try:
+            os.rename(folder, folder.replace('01.', 'Jan_'))
+            os.rename(folder, folder.replace('02.', 'Feb_'))
+            os.rename(folder, folder.replace('03.', 'Mar_'))
+            os.rename(folder, folder.replace('04.', 'Apr_'))
+            os.rename(folder, folder.replace('05.', 'May_'))
+            os.rename(folder, folder.replace('06.', 'Jun_'))
+            os.rename(folder, folder.replace('07.', 'Jul_'))
+            os.rename(folder, folder.replace('08.', 'Aug_'))
+            os.rename(folder, folder.replace('09.', 'Sep_'))
+            os.rename(folder, folder.replace('10.', 'Oct_'))
+            os.rename(folder, folder.replace('11.', 'Nov_'))
+            os.rename(folder, folder.replace('12.', 'Dec_'))
+        except FileNotFoundError:
+            pass
