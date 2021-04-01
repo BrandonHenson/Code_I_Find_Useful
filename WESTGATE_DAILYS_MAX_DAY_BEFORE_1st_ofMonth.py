@@ -3,6 +3,7 @@ import os
 import keyboard
 import time
 
+
 filelist = open(str(os.getcwd()) + '/MAXDAY.xls', 'a')
 input('Run this from the folder with the daily files in it')
 # remove irrelevant sheets
@@ -29,8 +30,10 @@ for i in os.listdir(os.getcwd()):
         del wb['Information']
         wb.save(i)
         ind = ind + 1
+
+
 # save values of westgate sheet
-print("Getting Values From Formulas")
+print("Copying Values From Formulas")
 ind = 1
 for i in os.listdir(os.getcwd()):
     if 'xlsx' in i:
@@ -90,6 +93,8 @@ for i in os.listdir(os.getcwd()):
         time.sleep(2)
         os.system("taskkill /f /im EXCEL.EXE")
         ind = ind + 1
+
+
 print("Displaying Date And Values (Last Step)")
 # Display file and day average
 ind = 1

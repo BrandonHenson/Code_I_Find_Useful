@@ -102,5 +102,6 @@ for folder in os.listdir(path):
             os.rename(folder, folder.replace('10.', 'Oct_'))
             os.rename(folder, folder.replace('11.', 'Nov_'))
             os.rename(folder, folder.replace('12.', 'Dec_'))
+            os.rename(folder, folder.replace('00.0000', 'DO THESE MANUALLY'))
         except FileNotFoundError:
             pass
